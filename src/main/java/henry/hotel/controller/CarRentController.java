@@ -28,14 +28,14 @@ import henry.hotel.temp.CurrentReservation;
 import henry.hotel.temp.CurrentUser;
 
 @Controller
-public class HotelReservationController {
+public class CarRentController {
 
 	private UserService userService;
 
 	private ReservationService reservationService;
 	
 	@Autowired
-	public HotelReservationController(UserService userService, ReservationService reservationService) {
+	public CarRentController(UserService userService, ReservationService reservationService) {
 		this.userService = userService;
 		this.reservationService = reservationService;
 	}

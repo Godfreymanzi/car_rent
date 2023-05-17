@@ -18,7 +18,7 @@
 	<link rel="stylesheet" th:href="@{css/reservation.css}">
 	<link rel="icon" th:href="@{images/header/white-logo.png}">
 
-	<title>Reservation</title>
+	<title>Car Rent</title>
 </head>
 
 <body>
@@ -30,14 +30,14 @@
 		<header>
 			<nav class="nav-wrapper">
 				<div class="logo">
-					<a th:href="@{/}"> <img th:src="@{images/header/white-logo.png}" class="logo">
+<!--					<a th:href="@{/}"> <img th:src="@{images/header/white-logo.png}" class="logo">-->
 					</a>
 				</div>
 
 				<!-- Menu bar -->
 				<ul class="menu">
-					<li><a href="#home">Reservations</a></li>
-					<li><a href="#book">Booking</a></li>
+					<li><a href="#home">Order here</a></li>
+					<li><a href="#book">Orders</a></li>
 					<li><a href="#footer">About Me</a></li>
 				</ul>
 			</nav>
@@ -48,7 +48,7 @@
 		<div class="wrapper">
 			<ul id="scene" data-invert-x="false" data-invert-y="false" data-scalar-x="7" data-scalar-y="7"
 				data-friction-x="0.1" data-friction-y="0.1" data-origin-x="0.5" data-origin-y="0.5">
-				<li class="layer name" data-depth="0.90">Reservations</li>
+				<li class="layer name" data-depth="0.90">Your Orders</li>
 				<li class="layer btn btn-main" data-depth="0.30"><a th:href="@{/your-reservations}" class="res-btn">Your
 						Reservations</a> <br> <a th:href="@{/}" class="back-btn">Back
 						Home</a></li>
@@ -58,9 +58,9 @@
 
 	<!-- Hotel Booking Section -->
 	<div class="container">
-		<h2 class="sub-title" id="book">Hotel Booking</h2>
+		<h2 class="sub-title" id="book">Car rent</h2>
 		<div class="hotel_reserve_box card">
-			<h3>Booking Form</h3>
+			<h3>Ordering Form</h3>
 			<br>
 
 			<!-- Reservation form -->
@@ -70,29 +70,28 @@
 				<div class="form-group">
 				
 					<!-- Room Type -->
-					<input type="hidden" th:field="*{id}" /> <label>Room/SuiteType</label>
+					<input type="hidden" th:field="*{id}" /> <label>Trip cars</label>
 					<select class="form-control prc" th:field="*{room}" id="room_type" required>
-						<option value="Single Deluxe">Single Deluxe</option>
-						<option value="Single Standard">Single Standard</option>
-						<option value="Double Deluxe">Double Deluxe</option>
-						<option value="Double Standard">Double Standard</option>
-						<option value="Family Deluxe">Family Deluxe</option>
-						<option value="Family Standard">Family Standard</option>
-						<option value="Honeymoon Suite">Honeymoon Suite</option>
-						<option value="Honeymoon Deluxe Suite">Honeymoon Deluxe
-							Suite</option>
+						<option value="4 seats car">4 seats car</option>
+						<option value="BMW">Bmw car</option>
+						<option value="BENZ MERCEDES"> Benz Mercedes</option>
+						<option value="VOLKSWAGEN">Volkswagen </option>
+						<option value="Family CAR">Family car</option>
+						<option value="Avensis">Avensis</option>
+						<option value="TOYOTA GXL">TOYOTA GXL</option>
+						<option value="HYUNDAI SANTAFE">HYUNDAI SANTAFE</option>
 					</select>
 				</div>
 
 				<!-- Period of Stay -->
 				<div class="form-group">
-					<label>Period of Stay</label> <input class="form-control prc" id="stay-per" th:field="*{stayPeriod}"
+					<label>Period of rent</label> <input class="form-control prc" id="stay-per" th:field="*{stayPeriod}"
 						placeholder="Days" pattern="^(?:[1-9]|[1-4][0-9]|50)$" type="number" required />
 				</div>
 
 				<!-- Number of Rooms -->
 				<div class="form-group">
-					<label>Number of room/suite</label> <input class="form-control prc" id="room_number"
+					<label>Number of cars</label> <input class="form-control prc" id="room_number"
 						th:field="*{rooms}" pattern="^(?:[1-9]|[1-4][0-9]|50)$" type="number" placeholder="Rooms"
 						required />
 				</div>
@@ -113,7 +112,7 @@
 
 				<!-- Restaurant Buffet -->
 				<div class="form-group">
-					<label>Restaurant Open Buffet</label> <select class="form-control prc" id="res_buffet"
+					<label>Need a driver</label> <select class="form-control prc" id="res_buffet"
 						th:field="*{openBuffet}" required>
 						<option value="YES">Yes</option>
 						<option value="NO">No</option>
@@ -122,7 +121,7 @@
 
 				<!-- Arrival Date -->
 				<div class="form-group">
-					<label>Visiting start from date </label> <br> <label class="date-label">Arrival Date:</label><input
+					<label>Renting start from date </label> <br> <label class="date-label">Returned Date:</label><input
 						th:field="*{arrivalDate}" type="date" id="dateTime_arr" name="dateTime" required />
 				</div>
 
@@ -153,8 +152,8 @@
 			<div class="colum1">
 				<h1>About Me</h1>
 
-				<p>HENRY AZER</p>
-				<img class="me-image" alt="" src="/images/footer/me.jpg" />
+				<p>Car Rent</p>
+<!--				<img class="me-image" alt="" src="/images/footer/me.jpg" />-->
 
 			</div>
 
@@ -174,11 +173,11 @@
 					<p>LinkedIn Account</p>
 				</div>
 
-				<div class="row">
-					<a href="https://www.facebook.com/HeNaRyAzEr/" target="_blank"><img
-							src="/images/footer/facebook.png" /></a>
-					<p>Facebook Account</p>
-				</div>
+<!--				<div class="row">-->
+<!--					<a href="https://www.facebook.com/HeNaRyAzEr/" target="_blank"><img-->
+<!--							src="/images/footer/facebook.png" /></a>-->
+<!--					<p>Facebook Account</p>-->
+<!--				</div>-->
 
 			</div>
 
@@ -201,11 +200,11 @@
 				</div>
 
 
-				<div class="row2">
-					<a href="https://wa.me/201207885279" target="_blank"><img src="/images/footer/whatsApp.png"
-							class="whats-img" /></a>
-					<p>WhatsApp Account</p>
-				</div>
+<!--				<div class="row2">-->
+<!--					<a href="https://wa.me/201207885279" target="_blank"><img src="/images/footer/whatsApp.png"-->
+<!--							class="whats-img" /></a>-->
+<!--					<p>WhatsApp Account</p>-->
+<!--				</div>-->
 
 
 			</div>
@@ -215,13 +214,13 @@
 		<div class="container-footer">
 			<div class="footer">
 				<div class="copyright">
-					Copyright ©2020 All rights reserved | <a>Developed By:
-						Henry-Azer</a>
+					Copyright ©2023 All rights reserved | <a>Developed By:
+						Manzi </a>
 				</div>
 
 				<div class="information">
-					<a>Hotel Reservation</a> | <a>Programming Language Project</a> | <a>Dr.
-						Hatem Magdy</a>
+					<a>Car rent</a> | <a></a> | <a>Dr.
+						</a>
 				</div>
 			</div>
 
